@@ -1,0 +1,36 @@
+{% extends 'index.html' %}
+
+{% block description %}
+    <div class="alert alert-secondary text-center" role="alert">Edit task</div>
+{% endblock %}
+
+{% block content %}
+<form action="" method='POST'>
+        
+    {% for field in form %}
+    <div class="input-group mb-3">         
+        
+        {{ field.label(class="control-label") }}
+        {{ field(class="form-control border border-success") }}           
+               
+    </div> 
+
+    {% endfor %}   
+
+    <div class="row">      
+        <div class="input-group-prepend ">
+          <div class="col-6"></div>
+          <div class="col-6"></div> 
+          <a class="btn btn-outline-danger col-6 mr-2" href="/">Cancel</a> 
+          <button  class="btn btn-success col-6 ml-2" type="submit">Commit</button>           
+        </div>
+    </div>
+</form>
+
+{% endblock %}
+
+
+
+
+
+ 
